@@ -1,0 +1,757 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* BACKGROUND & BASE */
+body {
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #dce6d5 0%, #f5eee1 50%, #dce6d5 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* SAMPUL UNDANGAN */
+.cover-screen {
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    background: #f5eadb;
+    overflow: hidden;
+}
+
+.cover-content {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+}
+
+.cover-tagline {
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 5vw, 30px);
+    margin-bottom: 5px;
+    color: #35160f;
+}
+
+.script-tittle {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    margin-bottom: 18px;
+    color: #35160f;
+}
+
+.amplop-container {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.amplop-container > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.teks-amplop {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    color: #35160f;
+    pointer-events: none;
+}
+
+.teks-amplop h2 {
+    font-family: "Brush Script MT", cursive;
+    font-size: clamp(27px, 7vw, 40px);
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.teks-amplop p {
+    font-family: Georgia, serif;
+    font-size: clamp(10px, 3vw, 14px);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.guet-label {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.label {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.cover-screen .btn-gold {
+    display: inline-block;
+    width: min(80%, 250px);
+    padding: 13px 20px;
+    border: none;
+    border-radius: 30px;
+    background: #35160f;
+    color: white;
+    font-family: "Brush Script MT", cursive;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cover-screen .btn-gold:hover {
+    background: #54291f;
+}
+
+/* SLIDE 2 - NAMA DI ATAS FOTO */
+#couple-screen {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 16px;
+    background: #173c29;
+    color: #fff4e3;
+    text-align: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    overflow: hidden;
+}
+
+#couple-screen .couple-content {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.wedding-label {
+    font-family: Georgia, serif;
+    font-size: clamp(17px, 4vw, 23px);
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 30px 0 15px;
+}
+
+.couple-picture {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: 35px auto 25px;
+    isolation: isolate;
+}
+
+.couple-image {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    transform: translateY(20px);
+}
+
+.couple-frame {
+    position: absolute;
+    z-index: 3;
+    width: 112%;
+    height: 108%;
+    top: -4%;
+    left: -6%;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+.couple-names {
+    position: relative;
+    z-index: 5;
+    top: 13%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+    margin: 25px 0 10px;
+}
+
+.nama-bride, .nama-groom {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: clamp(48px, 12vw, 68px);
+    font-weight: normal;
+    line-height: 1.1;
+    color: #fffaf0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    margin: 0;
+}
+
+.couple-names span {
+    color: #d9bd82;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.wedding-date {
+    position: absolute;
+    z-index: 6;
+    top: 28%;
+    right: 12%;
+    color: #fffaf0;
+    font-family: Georgia, serif;
+    font-size: clamp(13px, 3.5vw, 17px);
+    font-weight: bold;
+    text-shadow: 0 2px 4px #0008;
+}
+
+#btn-lanjut_doa {
+    position: relative;
+    z-index: 7;
+    margin-top: 10px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 1px solid #d9bd82;
+    background: #3b1712;
+    color: #fffaf0;
+    font-size: 15px;
+}
+
+/* MAIN INVITATION */
+#main-invitation {
+    background-color: #f5eee1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.prayer-section {
+    background-color: #e4eadb;
+    padding: 20px 12px;
+}
+
+.couple-details-section {
+    position: relative;
+    width: min(94%, 620px);
+    margin: 35px auto;
+    padding: 35px 15px;
+    background: #173c29;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.couple-details-card {
+    position: relative;
+    z-index: 1;
+    width: 82%;
+    margin: 0 auto;
+    padding: 38px 18px;
+    background: #fff4e3;
+    color: #403126;
+    text-align: center;
+    outline: 2px solid #d7c5a6;
+    outline-offset: 3px;
+    box-sizing: border-box;
+}
+
+.couple-details-card .arabic-text {
+    font-size: 20px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.invitation-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.person-info {
+    margin: 28px 0;
+}
+
+.full-name {
+    font-family: "Brush Script MT", cursive;
+    font-size: clamp(27px, 7vw, 38px);
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.person-info p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 4px 0;
+}
+
+.instagram-name {
+    margin-top: 10px !important;
+    color: #76654f;
+}
+
+.couple-symbol {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-style: italic;
+    margin: 24px 0;
+}
+
+/* SAVE THE DATE */
+#save-the-date {
+    padding: 55px 20px;
+    text-align: center;
+    background-color: #e4eadb;
+    color: #52634c;
+}
+
+#save-the-date .eyebrow {
+    color: #8a795b;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+#save-the-date .section-title {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.countdown-box {
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 22px 15px;
+    background: #fffdf7;
+    border: 1px solid #d6c8a9;
+    border-radius: 16px;
+}
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cd-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 48px;
+}
+
+.cd-item span {
+    color: #52634c;
+    font-size: 27px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+
+.cd-item small {
+    color: #8a795b;
+    font-size: 10px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.countdown-colon {
+    font-size: 22px;
+    color: #c0ad87;
+    align-self: flex-start;
+    padding-top: 3px;
+}
+
+.event-location {
+    max-width: 500px;
+    margin: 40px auto 0;
+    padding: 25px 18px;
+    background: #fffdf7;
+    border: 1px solid #d6c8a9;
+    border-radius: 16px;
+}
+
+.maps-preview {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e1d8c5;
+    margin-top: 15px;
+}
+
+.maps-preview iframe {
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+
+/* DRESSCODE */
+.dresscode-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f5eee2;
+}
+
+.dresscode-colors {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.dresscode-color p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #403126;
+}
+
+.dresscode-color small {
+    font-size: 10px;
+    color: #76654f;
+}
+
+.color-box {
+    width: 100%;
+    height: 75px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #d8cbb8;
+    box-shadow: 0 3px 8px #00000012;
+}
+
+/* RUNDOWN */
+.rundown-section {
+    padding: 50px 18px;
+    background: #f5eee1;
+}
+
+.rundown-card {
+    max-width: 520px;
+    margin: auto;
+    padding: 25px 18px;
+    background: #fffdf7;
+    border: 1px solid #d6c8a9;
+    border-radius: 18px;
+}
+
+.rundown-subtitle {
+    text-align: center;
+    color: #8a795b;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.rundown-title {
+    text-align: center;
+    color: #173c29;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.rundown-date {
+    text-align: center;
+    color: #817666;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.rundown-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+/* RSVP */
+.card_rsvp_section {
+    width: 100%;
+    padding: 35px 15px;
+    background: #173c29;
+    color: #403126;
+}
+
+.rsvp_card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    background: #fff4e3;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0002;
+}
+
+.rsvp_card h3 {
+    color: #244832;
+    font-family: Georgia, serif;
+}
+
+.rsvp-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.rsvp-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 90px;
+    border: 1px solid #eee2d0;
+    border-radius: 10px;
+    background: #fffdf9;
+    color: #403126;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rsvp-option:hover {
+    border-color: #a38b5b;
+    background: #f5ead7;
+}
+
+.rsvp-option.terpilih {
+    border-color: #244832;
+    background-color: #d1dfc7;
+}
+
+#rsvp_form {
+    margin-top: 25px;
+}
+
+#rsvp_form .form-control, #rsvp_form .form-select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d9cbb6;
+    border-radius: 7px;
+    background: #fffdf9;
+    color: #403126;
+}
+
+#rsvp_form .btn-gold {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #244832;
+    color: white;
+    cursor: pointer;
+}
+
+#daftar-ucapan {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dfd1bc;
+}
+
+/* GIFT SECTION */
+.gift-section {
+    padding: 60px 20px;
+    background-color: #e4eadb;
+    text-align: center;
+}
+
+.gift-card {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 35px 22px;
+    background-color: #fffdf7;
+    border: 1px solid #d6c8a9;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.gift-method {
+    padding: 22px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e1d8c5;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.gift-button {
+    background-color: #65785d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 11px 20px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* LOVE STORY */
+.love-story-section {
+    padding: 55px 18px;
+    background: #e8eee5;
+    text-align: center;
+    color: #52634c;
+}
+
+.story-images {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+}
+
+.story-image-item {
+    margin-bottom: 24px;
+}
+
+.story-image-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 6px solid #fffdf7;
+    border-radius: 12px;
+}
+
+/* CLOSING SECTION */
+.closing-section {
+    padding: 60px 20px 35px;
+    background: #f5eee1;
+    color: #403126;
+    text-align: center;
+}
+
+.closing-names {
+    font-family: "Brush Script MT", cursive;
+    font-size: clamp(32px, 8vw, 42px);
+    margin: 12px 0;
+}
+
+.creator-info {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #dfd1bc;
+    font-size: 12px;
+    color: #77796e;
+}
+
+/* TOMBOL MUSIK ELEGAN */
+.music-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3b1712;
+    color: #f8e8c8;
+    border: 1px solid #c7a66a;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(45, 20, 12, 0.25);
+    transition: all 0.3s ease;
+}
+
+.music-button.playing i {
+    animation: putarMusik 3s linear infinite;
+}
+
+@keyframes putarMusik {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ANIMASI BUNGA */
+.flower {
+    position: absolute;
+    z-index: 4;
+    width: 28%;
+    height: auto;
+    pointer-events: none;
+    animation: bungaGoyang 3s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+}
+
+.flower-left {
+    left: -2%;
+    bottom: 12%;
+}
+
+.flower-right {
+    right: -2%;
+    top: 12%;
+}
+
+@keyframes bungaGoyang {
+    from { transform: rotate(-5deg) translateY(0); }
+    to { transform: rotate(5deg) translateY(-8px); }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 480px) {
+    .couple-picture {
+        width: 94%;
+        margin-top: 45px;
+    }
+    .nama-bride, .nama-groom {
+        font-size: clamp(35px, 9vw, 46px);
+    }
+    .flower {
+        width: 25%;
+    }
+    .music-button {
+        width: 42px;
+        height: 42px;
+        top: 14px;
+        right: 14px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 400px) {
+    .couple-details-section {
+        padding: 28px 8px;
+    }
+    .couple-details-card {
+        padding: 30px 12px;
+        width: 86%;
+    }
+    .cover-screen {
+        padding: 20px 12px;
+    }
+    .amplop-container {
+        max-width: 340px;
+    }
+    .dresscode-colors {
+        gap: 7px;
+    }
+    .color-box {
+        height: 55px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .countdown-timer {
+        gap: 5px;
+    }
+    .cd-item span {
+        font-size: 23px;
+    }
+}

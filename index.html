@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Undangan Online</title>
+</head>
+
+<body class="cover-active">
+    <div class="bg-floral-overlay"></div>
+
+    <!-- SAMPUL UNDANGAN -->
+    
+<!-- SAMPUL UNDANGAN -->
+<div id="buka_cover" class="screen cover-screen">
+    <div class="cover-content">
+
+        <h2 class="cover-tagline">YOU'RE INVITED</h2>
+        <p class="script-tittle">To Our Wedding</p>
+
+        <div class="amplop-container">
+            <img src="asset/amplop.webp" alt="Amplop Undangan">
+            <div class="teks-amplop">
+                <p>You didn't receive this invitation by chance. On this special day,
+                    we truly hope you'll be with us.
+                </p>
+            </div>
+        </div>
+
+        <p class="guet-label">Kepada Yth.</p>
+        <p class="label"><b>Nama Tamu Undangan</b></p>
+
+        <button id="btn-buka_Undangan"
+                class="btn-gold" type="button">
+            Buka Undangan
+        </button>
+
+    </div>
+</div>
+    
+    <!-- SLIDE KE 2 -->
+    <div id="couple-screen" class="screen couple-screen hidden">
+        <div class="couple-content">
+
+            <h5 class="wedding-label">THE WEDDING OF</h5>
+
+            <div class="couple-picture">
+            
+                <!-- Bunga dekorasi kiri -->
+                <img class="flower flower-left" src="asset/bungapink.webp" alt="">
+
+                <!-- Bunga dekorasi kanan -->
+                <img class="flower flower-right" src="asset/bungaputih.webp" alt="">
+
+                <!-- Foto dan bingkai pengantin -->
+                <img class="couple-image" src="asset/pengantin.png" alt="Foto Pengantin">
+
+            </div>
+            
+            <!-- Nama dan tanggal di atas foto -->
+            <div class="couple-overlay">
+                <div class="couple-names">
+                    <h2 class="nama-bride">Lia</h2>
+                    <span class="couple-ampersand">&amp;</span>
+                    <h2 class="nama-groom">Ufiq</h2>
+                </div>
+
+                <p class="wedding-date">24/09/2026</p>
+            </div>
+
+        </div>
+
+        <button id="btn-lanjut_doa" class="btn-gold" type="button">
+            Clik for the details 
+        </button>
+
+        </div>
+    </div>
+
+
+    <!-- MAIN INVITATION -->
+    <main id="main-invitation" class="hidden">
+        <section class="content-section prayer-section">
+            <img class="ucapan-doa" src="asset/surah.png" alt="Gambar berisi Do'a">
+        </section>
+
+        <section class="couple-details-section">
+            <!-- DEKORASI BUNGA RAMBAT -->
+            <div class="couple-details-card">
+                <p class="arabic-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                <p class="invitation-text"><i>Assalamu'alaikum Warahmatullahi Wabarakatuh</i></p>
+                <p>Dengan memohon rahmat dan rihdo Allah SWT., kami mengundang Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami.</p>
+
+                <div class="couple-info">
+                    <h2 class="full-name">Tanisha Aulia Putri</h2>
+                    <p>Putri dari Bapak Heri Sujatmiko &amp; Ibu Vita Sari</p>
+                    <p class="instagram-name">@nishalia</p>
+                </div>
+
+                <div class="couple-simbol">&amp;</div>
+
+                <div class="couple-info">
+                    <h2 class="full-name">Muhammad Saufiq Harrie</h2>
+                    <p>Putra dari Bapak Sujawoto Harrie &amp; Ibu Sri Lestari</p>
+                    <p class="instagram-name">@saufiiiqie</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATETIME -->
+        <section id="save-the-date" class="content-section">
+            <p class="eyebrow">SAVE THE DATE</p>
+            <!-- Typo penutup </h2> ganda diperbaiki -->
+            <h2 class="section-title">Hari Bahagia Kami</h2>
+            <p>Sabtu, 6 November 2026</p>
+            <p>Pukul 15.00 WIB - Selesai</p>
+
+            <div class="countdown-box">
+                <p class="countdown-tittle">Menuju hari bahagia kami</p>
+                <div class="countdown-timer">
+                    <div class="cd-item"><span id="cd-days">00</span><small>HARI</small></div>
+                    <span class="countdown-colon">:</span>
+                    <div class="cd-item"><span id="cd-hours">00</span><small>JAM</small></div>
+                    <span class="countdown-colon">:</span>
+                    <div class="cd-item"><span id="cd-minutes">00</span><small>MENIT</small></div>
+                    <span class="countdown-colon">:</span>
+                    <div class="cd-item"><span id="cd-seconds">00</span><small>DETIK</small></div>
+                </div>
+
+                <div class="wedding-location">
+                    <p class="eyebrow">LOKASI ACARA</p>
+                    <p class="location-name">Pink Beach, Nusa Tenggara Timur</p>
+                </div>
+
+                <div class="maps-preview">
+                    <iframe src="https://www.google.com/maps/embed" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- DRESSCODE -->
+        <section id="dresscode" class="dresscode-section">
+            <div class="dresscode-card">
+                <p class="dresscode-subtitle">OUR WEDDING</p>
+                <h2 class="dresscode-title">Dresscode</h2>
+
+                <p class="dresscode-description">
+                    Dengan penuh sukacita, kami mengundang Anda untuk mengenakan pakaian dengan pilihan warna
+                    berikut agar selaras dengan tema hari bahagia kami.
+                </p>
+                
+                
+                <div class="dresscode-colors">
+                    <div class="dresscode-color">
+                        <div class="color-box" style="background-color: #F6B6C1;"></div>
+                        <p>Blush Pink</p>
+                        <small>#F6B6C1</small>
+                    </div>
+
+                    <div class="dresscode-color">
+                        <div class="color-box" style="background-color: #8FA344;"></div>
+                            <p>Fresh Green</p>
+                            <small>#8FA344</small>
+                    </div>
+
+                    <div class="dresscode-color">
+                        <div class="color-box" style="background-color: #FFD1D5;"></div>
+                            <p>Lime</p>
+                            <small>#FFD1D5</small>
+                    </div>
+
+                    <div class="dresscode-color">
+                        <div class="color-box" style="background-color: #765744;"></div>
+                            <p>Brown</p>
+                            <small>#765744</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- RUNDOWN ACARA -->
+        <section id="rundown" class="rundown-section">
+            <div class="rundown-card">
+
+                <p class="rundown-subtitle">WEDDING SCHEDULE</p>
+                <h2 class="rundown-title">Rundown Acara</h2>
+                <p class="rundown-date">Sabtu, 6 Juni 2031</p>
+
+                <!-- Ganti gambar ini dengan gambar rundown dari Canva -->
+                <img src="asset/party.png" alt="Jadwal acara pernikahan" class="rundown-image" loading="lazy"> 
+            </div>
+        </section>
+
+        <!-- RSVP -->
+        <section id="rsvp_section" class="card_rsvp_section">
+            <div class="rsvp_card">
+                <h3 class="text-center mb-1">RSVP Kehadiran</h3>
+                <p class="text-muted small text-center mb-4">RSVP sebelum: Kamis, 31 Mei 2031</p>
+
+                <div id="status-pilihan" class="text-center fw-bold mb-3" style="color: #244832;"></div>
+
+                <div class="rsvp-options">
+                    <button type="button" class="rsvp-option" onclick="pilihKehadiran('Hadir')">
+                        <span class="bintang">☆</span><span>Hadir</span>
+                    </button>
+                    <button type="button" class="rsvp-option" onclick="pilihKehadiran('Tidak Hadir')">
+                        <span class="silang">×</span><span>Tidak Hadir</span>
+                    </button>
+                </div>
+
+                <!-- ID Form Disamakan dengan JS -->
+                <form id="rsvp_form" hidden>
+                    <div class="mb-3">
+                        <label class="form-label" for="nama">Nama</label>
+                        <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Lengkap" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="no_telp">No. Telepon</label>
+                        <input type="text" id="no_telp" name="no_telp" class="form-control" placeholder="08123456789" required>
+                    </div>
+
+                    <div id="bagian-pendamping" class="mb-3" hidden>
+                        <label for="pendamping" class="form-label">Jumlah pendamping Tamu</label>
+                        <select id="pendamping" class="form-select">
+                            <option value="0">Tidak ada pendamping</option>
+                            <option value="1">1 orang</option>
+                            <option value="2">2 orang</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="ucapan">Ucapan dan Doa</label>
+                        <textarea id="ucapan" name="ucapan" class="form-control" placeholder="Tuliskan Ucapan..." rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gold">Kirim</button>
+                </form>
+            
+                <div id="daftar-ucapan" class="mt-4">
+                    <h5>Ucapan dan Doa</h5>
+                    <div id="isi-ucapan"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KIRIM HADIAH -->
+        <section id="gift-section" class="gift-section">
+            <div class="gift-card">
+                <p class="gift-subtitle"><b>TANDA KASIH</b></p>
+                <p class="gift-desc">Do'a restu Anda merupakan hadiah terindah bagi kami.</p>
+
+                <div class="gift-method">
+                    <h3>Transfer Bank</h3>
+                    <p class="bank-name">BANK BRI</p>
+                    <p id="nomor-rekening" class="account-number">88953405554162357</p>
+                    <p class="account-owner">a.n Tanisha Aulia Putri</p>
+                    <!-- Penulisan nama fungsi JS diperbaiki (tanpa strip) -->
+                    <button class="gift-button" type="button" onclick="salinRekening()">Salin Nomor Rekening</button>
+                </div>
+
+                <div class="gift-method">
+                    <h3>Kirim Kado</h3>
+                    <p class="gift-address">Nama Penerima: Saufiq &amp; Lia<br>Alamat: Jl. Mekarsaluyu No.19, Bandung.</p>
+                    <!-- Penulisan nama fungsi JS diperbaiki -->
+                    <button class="gift-button" type="button" onclick="salinAlamat()">Salin Alamat</button>
+                </div>
+                <p id="gift-notification" class="gift-notification" aria-live="polite"></p>
+            </div>
+        </section>
+        
+        <!-- HISTORY PENGANTIN -->
+        <section id="love-story" class="love-story-section">
+            <p class="story-subtitle">OUR JOURNEY</p>
+            <h2 class="story-title">Kisah Kami</h2>
+            <p class="story-description">
+                Setiap pertemuan memiliki cerita. Inilah perjalanan kami
+                hingga akhirnya memutuskan untuk melangkah bersama.
+            </p>
+
+            <div class="story-images">
+                <div class="story-image-item">
+                    <img src="asset/pg1.webp" alt="Awal pertemuan kami">
+                    <p>Awal Pertemuan kita saat dimasa perkuliahan, Lia lah yang menjadi orang pertama merasakan 
+                        bunga-bunga di hati nya saat bertemu dan bercengkrama dengan Saufiq.
+                    </p>
+                </div>
+
+                <div class="story-image-item">
+                    <img src="asset/pg2.webp" alt="Perjalanan cinta kami">
+                    <p>Perjalanan Cinta, tak banyak yang bisa disampaikan. Tapi, hingga masa perkuliahan selesai pun mereka
+                        belum saling tahu mengenai perasaan yang sudah muncul lama diantara mereka. Lama tak berjumpa, mungkin sekitar 2 tahun
+                        dengan kesengajaan yang telah Tuhan berikan jalannya Lia dan Saufiq pun bertemu kembali saat reuni kelas. Setelah saat itu, 
+                        kejujuran mulai tersampaikan.
+                    </p>
+                </div>
+
+                <div class="story-image-item">
+                    <img src="asset/pg3.webp" alt="Kisah menuju pernikahan">
+                    <p>Menuju Hari Bahagia. 3 tahun lamanya menjalin kisah asrama. Mereka pun mulai siap untuk melangkah ke jenjang yang
+                        lebih serius, Pernikahan.
+                    </p>
+                </div>
+            </div>
+
+            <p class="story-ending">
+            And this is only the beginning of our forever. ♡
+            </p>
+        </section>
+
+        <!-- PENUTUP UNDANGAN -->
+        <section id="closing" class="closing-section">
+            <h1 class="closing-greeting">TERIMA KASIH</h1>
+            <div class="closing-flower">✿</div>
+
+            <p class="closing-message">
+                Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+                berkenan hadir dan memberikan doa restu.
+            </p>
+
+            <p class="closing-prayer">
+                Semoga setiap doa dan kebaikan menjadi berkah bagi kita semua.
+            </p>
+
+            <p class="closing-end">With Love,</p>
+            <h2 class="closing-names">Lia &amp; Ufiq</h2>
+            <p class="closing-date">24 September 2026</p>
+
+            <div class="closing-divider"></div>
+
+            <p class="closing-footer">
+                Terima kasih telah menjadi bagian dari cerita kami.
+            </p>
+
+            <!-- INFORMASI CREATOR -->
+            <div class="creator-info">
+                <p>Digital Invitation</p>
+                <p>Designed with love by</p>
+                <a href="https://www.instagram.com/anyyna0___0?xtok=MXU2eW5weTdvNmxlcA%3D%3D&utm_source=qr" class="creator-instagram" target="_blank" rel="noopener noreferrer">
+                    ♡ @anyyna0___0;
+                </a>
+            </div>
+        </section>
+</main>
+
+    </main>
+
+    <!-- BACKSOUND -->
+    <audio id="backsound" loop preload="auto">
+        <source src="asset/Shape of My Heart - Backstreet Boys.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ID tombol musik diperbaiki -->
+   <button id="tombol-musik" class="music-button" type="button" aria-label="Putar musik">
+    <i class="bi bi-music-note-beamed"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
