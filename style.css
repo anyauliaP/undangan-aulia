@@ -136,6 +136,7 @@ img {
     width: 100%;
     max-width: 520px;
     margin: 0 auto;
+    position: relative;
 }
 
 .wedding-label {
@@ -236,11 +237,20 @@ img {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+    max-width: 520px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
 
 .prayer-section {
+    text-align: center;
     background-color: #e4eadb;
     padding: 20px 12px;
+}
+
+.ucapan-doa {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 .couple-details-section {
